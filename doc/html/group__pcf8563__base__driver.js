@@ -1,0 +1,105 @@
+var group__pcf8563__base__driver =
+[
+    [ "pcf8563_time_s", "structpcf8563__time__s.html", [
+      [ "date", "structpcf8563__time__s.html#a30ca8635d0267ef5190a408d7a134f7e", null ],
+      [ "hour", "structpcf8563__time__s.html#ae5af4ff48939d13d480f87e56a9385d6", null ],
+      [ "minute", "structpcf8563__time__s.html#a8ff981ec55c945940f4a0da7d8709b3c", null ],
+      [ "month", "structpcf8563__time__s.html#a3e00faf7fbf9805e9ec4d2edd6339050", null ],
+      [ "second", "structpcf8563__time__s.html#a8459fc4e94de7eefc74991e41779c8fc", null ],
+      [ "week", "structpcf8563__time__s.html#a5235d49df2828411fe72ff1b0b736c3b", null ],
+      [ "year", "structpcf8563__time__s.html#a57ca98d8f6d4baf0fe41c583c7dcb0d5", null ]
+    ] ],
+    [ "pcf8563_handle_s", "structpcf8563__handle__s.html", [
+      [ "debug_print", "structpcf8563__handle__s.html#a769d5b3a6c14790a0e126e8fe70b384b", null ],
+      [ "delay_ms", "structpcf8563__handle__s.html#a406c9433252b7366de417b7a60915c81", null ],
+      [ "iic_deinit", "structpcf8563__handle__s.html#af6963bbad902ca6e43942b48c07986c3", null ],
+      [ "iic_init", "structpcf8563__handle__s.html#a8826dd07625f8d90859ce9bd09628d61", null ],
+      [ "iic_read", "structpcf8563__handle__s.html#af4ef726288b88f51a846483803a1249b", null ],
+      [ "iic_write", "structpcf8563__handle__s.html#adca3ee7a793bbf510d5267daf0fcf1c5", null ],
+      [ "inited", "structpcf8563__handle__s.html#a19bedf28d2b9748f6a62d9ae93f4e68f", null ],
+      [ "receive_callback", "structpcf8563__handle__s.html#a4a9a1af4e28aea769f6d9f02a02e07c3", null ]
+    ] ],
+    [ "pcf8563_info_s", "structpcf8563__info__s.html", [
+      [ "chip_name", "structpcf8563__info__s.html#af890958c72bd715cc6454a10dc846ae6", null ],
+      [ "driver_version", "structpcf8563__info__s.html#a41b0bd442708b70d252c50b92c75265a", null ],
+      [ "interface", "structpcf8563__info__s.html#aebaa6c28dd4f2c3dc27566fcb910fd28", null ],
+      [ "manufacturer_name", "structpcf8563__info__s.html#ad25285dbf810c90f8eaf3fcef6f2b2ea", null ],
+      [ "max_current_ma", "structpcf8563__info__s.html#a9db82802561bf22d799b03a345f1d1dc", null ],
+      [ "supply_voltage_max_v", "structpcf8563__info__s.html#a3d2b12bcac7a85ea8646bff9debe8660", null ],
+      [ "supply_voltage_min_v", "structpcf8563__info__s.html#ad8bde6ddadaf43d951e62f3befb9d35a", null ],
+      [ "temperature_max", "structpcf8563__info__s.html#a3366a5dce9b829e03c3d321c2b4df3f6", null ],
+      [ "temperature_min", "structpcf8563__info__s.html#a8f9dbe66ac0b66ebae0a36fcb4ba368e", null ]
+    ] ],
+    [ "pcf8563_handle_t", "group__pcf8563__base__driver.html#gacff91ad1fe951e026c046c5aee69520f", null ],
+    [ "pcf8563_info_t", "group__pcf8563__base__driver.html#ga86ac51ac4efea910b8fdccb731567cdc", null ],
+    [ "pcf8563_time_t", "group__pcf8563__base__driver.html#ga9cd866987bbc580749abdeb9b3764197", null ],
+    [ "pcf8563_bool_t", "group__pcf8563__base__driver.html#ga1d698201489f364205a25838a896ca18", [
+      [ "PCF8563_BOOL_FALSE", "group__pcf8563__base__driver.html#gga1d698201489f364205a25838a896ca18ad3ce3a61143e051eb9900257cbf466cf", null ],
+      [ "PCF8563_BOOL_TRUE", "group__pcf8563__base__driver.html#gga1d698201489f364205a25838a896ca18a0c581e78f67f4cfa2548942493c91497", null ]
+    ] ],
+    [ "pcf8563_clock_out_t", "group__pcf8563__base__driver.html#ga91a6eae8fdeacc2684205b9624019357", [
+      [ "PCF8563_CLOCK_OUT_32P768KHZ", "group__pcf8563__base__driver.html#gga91a6eae8fdeacc2684205b9624019357a23b6049a3738dbc46ccf8618b79683c7", null ],
+      [ "PCF8563_CLOCK_OUT_1P024KHZ", "group__pcf8563__base__driver.html#gga91a6eae8fdeacc2684205b9624019357a6364e61bf552f7cf220faac3faeedec0", null ],
+      [ "PCF8563_CLOCK_OUT_32HZ", "group__pcf8563__base__driver.html#gga91a6eae8fdeacc2684205b9624019357a4ff5302cca7c38e1936029eafee89d05", null ],
+      [ "PCF8563_CLOCK_OUT_1HZ", "group__pcf8563__base__driver.html#gga91a6eae8fdeacc2684205b9624019357a7a58e9e27d815c4b096b0844067152e2", null ]
+    ] ],
+    [ "pcf8563_interrupt_event_t", "group__pcf8563__base__driver.html#gadafac85d8f8f5e316b62549c2c0bd50b", [
+      [ "PCF8563_INTERRUPT_EVENT_TIMER", "group__pcf8563__base__driver.html#ggadafac85d8f8f5e316b62549c2c0bd50ba09a6d7083e78177632a7738e672a1237", null ],
+      [ "PCF8563_INTERRUPT_EVENT_ALARM", "group__pcf8563__base__driver.html#ggadafac85d8f8f5e316b62549c2c0bd50bac2c39a57c7dda2812bcc1b4f14e76fa4", null ]
+    ] ],
+    [ "pcf8563_interrupt_mode_t", "group__pcf8563__base__driver.html#ga7fea67b64985bf097f26675d2f1a4465", [
+      [ "PCF8563_INTERRUPT_MODE_LEVEL", "group__pcf8563__base__driver.html#gga7fea67b64985bf097f26675d2f1a4465afcfdf70f85cd25809f87c58d2d43ec02", null ],
+      [ "PCF8563_INTERRUPT_MODE_PULSE", "group__pcf8563__base__driver.html#gga7fea67b64985bf097f26675d2f1a4465a9fc9f9dea5df51a90a934807f757ea12", null ]
+    ] ],
+    [ "pcf8563_timer_freq_t", "group__pcf8563__base__driver.html#ga11eb0b360187a47b690eb2f70679e40d", [
+      [ "PCF8563_TIMER_FREQ_4P096KHZ", "group__pcf8563__base__driver.html#gga11eb0b360187a47b690eb2f70679e40da3a257940134374c91e836ec19023bec7", null ],
+      [ "PCF8563_TIMER_FREQ_64HZ", "group__pcf8563__base__driver.html#gga11eb0b360187a47b690eb2f70679e40da0ef1654fe544f5591f3fc84a9e24375b", null ],
+      [ "PCF8563_TIMER_FREQ_1HZ", "group__pcf8563__base__driver.html#gga11eb0b360187a47b690eb2f70679e40da9cd3aad25ad671cd6dbc6fdba653a48d", null ],
+      [ "PCF8563_TIMER_FREQ_1_DIV_60HZ", "group__pcf8563__base__driver.html#gga11eb0b360187a47b690eb2f70679e40da2caeb566a2d6eec5a88092dcfd900340", null ]
+    ] ],
+    [ "pcf8563_clear_status", "group__pcf8563__base__driver.html#gafe26b795bf9a5f4c5b3678c88268e972", null ],
+    [ "pcf8563_deinit", "group__pcf8563__base__driver.html#ga17f476e7d78bcec9d3489e8971316ac3", null ],
+    [ "pcf8563_get_alarm_interrupt", "group__pcf8563__base__driver.html#ga487dafc367152057738ce6478f2e52fd", null ],
+    [ "pcf8563_get_clock_out", "group__pcf8563__base__driver.html#gab90b651a465a6289a2c58568757db238", null ],
+    [ "pcf8563_get_clock_out_enable", "group__pcf8563__base__driver.html#ga90e5bb56f7fd4dc5aabce2cc27ca8a89", null ],
+    [ "pcf8563_get_day_alarm", "group__pcf8563__base__driver.html#ga9ecbc6b9ac9b6fe7735b0f5c4a86bf72", null ],
+    [ "pcf8563_get_day_alarm_enable", "group__pcf8563__base__driver.html#ga99351e33ce9f202b4e11f3becbb1b9a3", null ],
+    [ "pcf8563_get_hour_alarm", "group__pcf8563__base__driver.html#ga90b5ab46367d6ccc7cd084e5179c0026", null ],
+    [ "pcf8563_get_hour_alarm_enable", "group__pcf8563__base__driver.html#ga4083cccb1c8e2e5200b63e60a47ea03b", null ],
+    [ "pcf8563_get_interrupt_mode", "group__pcf8563__base__driver.html#ga3c1c9dddb96bbbd63b5fd0ef81b3d1c5", null ],
+    [ "pcf8563_get_minute_alarm", "group__pcf8563__base__driver.html#ga9a94f982bcc58d9ac872fabf94ffa4fe", null ],
+    [ "pcf8563_get_minute_alarm_enable", "group__pcf8563__base__driver.html#ga1c0d57b32ff56d8fb0d4f9ac26c9b009", null ],
+    [ "pcf8563_get_power_on_reset", "group__pcf8563__base__driver.html#gad8bc19959561337e4a29aebf50f1a605", null ],
+    [ "pcf8563_get_rtc_stop", "group__pcf8563__base__driver.html#ga20943d50a59f84fbe33ff92aad68a153", null ],
+    [ "pcf8563_get_test_mode", "group__pcf8563__base__driver.html#gae2989e10ca0af445489fafabe032f3c2", null ],
+    [ "pcf8563_get_time", "group__pcf8563__base__driver.html#gae05870e253d628c852c87ef86c2ae692", null ],
+    [ "pcf8563_get_timer_enable", "group__pcf8563__base__driver.html#gaddada280a36fa8960b68f1e0b4a14b81", null ],
+    [ "pcf8563_get_timer_freq", "group__pcf8563__base__driver.html#ga4ac2b4cb78e7eb6980770621547463eb", null ],
+    [ "pcf8563_get_timer_interrupt", "group__pcf8563__base__driver.html#ga9806ead3a55c61b4140a9338247a1d92", null ],
+    [ "pcf8563_get_timer_value", "group__pcf8563__base__driver.html#gab961e3df32e0a18b74de505bd28dffc0", null ],
+    [ "pcf8563_get_week_alarm", "group__pcf8563__base__driver.html#ga15e76c9d3b6bd61966291abe91123977", null ],
+    [ "pcf8563_get_week_alarm_enable", "group__pcf8563__base__driver.html#gade9a211629fb19227cf00a5a9a2ecf2a", null ],
+    [ "pcf8563_info", "group__pcf8563__base__driver.html#ga06ef970b6fbc1fbb4af9b462396fa5f5", null ],
+    [ "pcf8563_init", "group__pcf8563__base__driver.html#ga83b0f5dc508a7e1f5a3c4a7cc30b58cb", null ],
+    [ "pcf8563_irq_handler", "group__pcf8563__base__driver.html#gabd773c44e4970c90630d91903acf0b36", null ],
+    [ "pcf8563_set_alarm_interrupt", "group__pcf8563__base__driver.html#gac1f34cce5e6f6308d3dd28f173cfe235", null ],
+    [ "pcf8563_set_clock_out", "group__pcf8563__base__driver.html#ga2facc9be8cd5fe25eee31a4927bf699b", null ],
+    [ "pcf8563_set_clock_out_enable", "group__pcf8563__base__driver.html#ga7d94c9c54277d2686eaecae20f849f13", null ],
+    [ "pcf8563_set_day_alarm", "group__pcf8563__base__driver.html#ga13c39d2c71c1ae0830821f17d6a32fb9", null ],
+    [ "pcf8563_set_day_alarm_enable", "group__pcf8563__base__driver.html#gac57418efeeacbeecf55bb8d398d5c74b", null ],
+    [ "pcf8563_set_hour_alarm", "group__pcf8563__base__driver.html#ga326159d8a79b6cba0847ce1f238a0c41", null ],
+    [ "pcf8563_set_hour_alarm_enable", "group__pcf8563__base__driver.html#ga08ab309aa5842c40b572062f6fd56300", null ],
+    [ "pcf8563_set_interrupt_mode", "group__pcf8563__base__driver.html#gad5af38925be32cc491df3900aef223cd", null ],
+    [ "pcf8563_set_minute_alarm", "group__pcf8563__base__driver.html#ga631ff3feb769577d86437e811d7f6f66", null ],
+    [ "pcf8563_set_minute_alarm_enable", "group__pcf8563__base__driver.html#gac92342a5c25603546236d1d19666e246", null ],
+    [ "pcf8563_set_power_on_reset", "group__pcf8563__base__driver.html#gafeac16ba2e54988d6685088e259858be", null ],
+    [ "pcf8563_set_rtc_stop", "group__pcf8563__base__driver.html#gacb2ccc116a7a2991315a43879448cfc1", null ],
+    [ "pcf8563_set_test_mode", "group__pcf8563__base__driver.html#ga5bc2ed4c53eea1d6855721e5c4f09576", null ],
+    [ "pcf8563_set_time", "group__pcf8563__base__driver.html#ga99214b9b407f495963357da98d1d2a19", null ],
+    [ "pcf8563_set_timer_enable", "group__pcf8563__base__driver.html#ga0ec9787e27f3d4679522d3016a8ba9c2", null ],
+    [ "pcf8563_set_timer_freq", "group__pcf8563__base__driver.html#ga72526ad962b718a27d263313079f01ae", null ],
+    [ "pcf8563_set_timer_interrupt", "group__pcf8563__base__driver.html#ga5b1b0012696aa2cb21dffbeb2b76b39e", null ],
+    [ "pcf8563_set_timer_value", "group__pcf8563__base__driver.html#gade3f5732bd2b29f17d7630f5493adb9c", null ],
+    [ "pcf8563_set_week_alarm", "group__pcf8563__base__driver.html#gac45418e0673d95059b2b5de0955af71a", null ],
+    [ "pcf8563_set_week_alarm_enable", "group__pcf8563__base__driver.html#ga07d5c26255de5955cf6abb84dfb512c1", null ]
+];

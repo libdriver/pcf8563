@@ -41,7 +41,7 @@ static pcf8563_handle_t gs_handle;        /**< pcf8563 handle */
 
 /**
  * @brief     output test
- * @param[in] times is the test times
+ * @param[in] times test times
  * @return    status code
  *            - 0 success
  *            - 1 test failed

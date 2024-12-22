@@ -71,7 +71,7 @@ void EXTI0_IRQHandler(void)
 
 /**
  * @brief     gpio exti callback
- * @param[in] pin is the gpio pin
+ * @param[in] pin gpio pin
  * @note      none
  */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
@@ -87,7 +87,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 /**
  * @brief     interface receive callback
- * @param[in] type is the event type
+ * @param[in] type event type
  * @note      none
  */
 static void a_alarm_callback(uint8_t type)
@@ -118,7 +118,7 @@ static void a_alarm_callback(uint8_t type)
 
 /**
  * @brief     interface receive callback
- * @param[in] type is the event type
+ * @param[in] type event type
  * @note      none
  */
 static void a_timer_callback(uint8_t type)
@@ -149,8 +149,8 @@ static void a_timer_callback(uint8_t type)
 
 /**
  * @brief     pcf8563 full function
- * @param[in] argc is arg numbers
- * @param[in] **argv is the arg address
+ * @param[in] argc arg numbers
+ * @param[in] **argv arg address
  * @return    status code
  *            - 0 success
  *            - 1 run failed

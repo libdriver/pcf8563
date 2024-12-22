@@ -163,64 +163,64 @@ typedef struct pcf8563_info_s
 
 /**
  * @brief     initialize pcf8563_handle_t structure
- * @param[in] HANDLE points to a pcf8563 handle structure
- * @param[in] STRUCTURE is pcf8563_handle_t
+ * @param[in] HANDLE pointer to a pcf8563 handle structure
+ * @param[in] STRUCTURE pcf8563_handle_t
  * @note      none
  */
 #define DRIVER_PCF8563_LINK_INIT(HANDLE, STRUCTURE)         memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link iic_init function
- * @param[in] HANDLE points to a pcf8563 handle structure
- * @param[in] FUC points to an iic_init function address
+ * @param[in] HANDLE pointer to a pcf8563 handle structure
+ * @param[in] FUC pointer to an iic_init function address
  * @note      none
  */
 #define DRIVER_PCF8563_LINK_IIC_INIT(HANDLE, FUC)          (HANDLE)->iic_init = FUC
 
 /**
  * @brief     link iic_deinit function
- * @param[in] HANDLE points to a pcf8563 handle structure
- * @param[in] FUC points to an iic_deinit function address
+ * @param[in] HANDLE pointer to a pcf8563 handle structure
+ * @param[in] FUC pointer to an iic_deinit function address
  * @note      none
  */
 #define DRIVER_PCF8563_LINK_IIC_DEINIT(HANDLE, FUC)        (HANDLE)->iic_deinit = FUC
 
 /**
  * @brief     link iic_read function
- * @param[in] HANDLE points to a pcf8563 handle structure
- * @param[in] FUC points to an iic_read function address
+ * @param[in] HANDLE pointer to a pcf8563 handle structure
+ * @param[in] FUC pointer to an iic_read function address
  * @note      none
  */
 #define DRIVER_PCF8563_LINK_IIC_READ(HANDLE, FUC)          (HANDLE)->iic_read = FUC
 
 /**
  * @brief     link iic_write function
- * @param[in] HANDLE points to a pcf8563 handle structure
- * @param[in] FUC points to an iic_write function address
+ * @param[in] HANDLE pointer to a pcf8563 handle structure
+ * @param[in] FUC pointer to an iic_write function address
  * @note      none
  */
 #define DRIVER_PCF8563_LINK_IIC_WRITE(HANDLE, FUC)         (HANDLE)->iic_write = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to a pcf8563 handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to a pcf8563 handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_PCF8563_LINK_DELAY_MS(HANDLE, FUC)          (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to a pcf8563 handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to a pcf8563 handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_PCF8563_LINK_DEBUG_PRINT(HANDLE, FUC)       (HANDLE)->debug_print = FUC
 
 /**
  * @brief     link receive_callback function
- * @param[in] HANDLE points to a pcf8563 handle structure
- * @param[in] FUC points to a receive_callback function address
+ * @param[in] HANDLE pointer to a pcf8563 handle structure
+ * @param[in] FUC pointer to a receive_callback function address
  * @note      none
  */
 #define DRIVER_PCF8563_LINK_RECEIVE_CALLBACK(HANDLE, FUC)  (HANDLE)->receive_callback = FUC
@@ -238,7 +238,7 @@ typedef struct pcf8563_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to a pcf8563 info structure
+ * @param[out] *info pointer to a pcf8563 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -248,7 +248,7 @@ uint8_t pcf8563_info(pcf8563_info_t *info);
 
 /**
  * @brief     irq handler
- * @param[in] *handle points to a pcf8563 handle structure
+ * @param[in] *handle pointer to a pcf8563 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 run failed
@@ -260,7 +260,7 @@ uint8_t pcf8563_irq_handler(pcf8563_handle_t *handle);
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to a pcf8563 handle structure
+ * @param[in] *handle pointer to a pcf8563 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic initialization failed
@@ -272,7 +272,7 @@ uint8_t pcf8563_init(pcf8563_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to a pcf8563 handle structure
+ * @param[in] *handle pointer to a pcf8563 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic deinit failed
@@ -284,8 +284,8 @@ uint8_t pcf8563_deinit(pcf8563_handle_t *handle);
 
 /**
  * @brief     set the current time
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] *t points to a time structure
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] *t pointer to a time structure
  * @return    status code
  *            - 0 success
  *            - 1 set time failed
@@ -298,8 +298,8 @@ uint8_t pcf8563_set_time(pcf8563_handle_t *handle, pcf8563_time_t *t);
 
 /**
  * @brief      get the current time
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *t points to a time structure
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *t pointer to a time structure
  * @return     status code
  *             - 0 success
  *             - 1 get time failed
@@ -312,8 +312,8 @@ uint8_t pcf8563_get_time(pcf8563_handle_t *handle, pcf8563_time_t *t);
 
 /**
  * @brief     enable or disable test mode
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set test mode failed
@@ -325,8 +325,8 @@ uint8_t pcf8563_set_test_mode(pcf8563_handle_t *handle, pcf8563_bool_t enable);
 
 /**
  * @brief      get the test mode status
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get test mode failed
@@ -338,8 +338,8 @@ uint8_t pcf8563_get_test_mode(pcf8563_handle_t *handle, pcf8563_bool_t *enable);
 
 /**
  * @brief     enable or disable rtc stop
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set rtc stop failed
@@ -351,8 +351,8 @@ uint8_t pcf8563_set_rtc_stop(pcf8563_handle_t *handle, pcf8563_bool_t enable);
 
 /**
  * @brief      get the rtc stop status
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get rtc stop failed
@@ -364,8 +364,8 @@ uint8_t pcf8563_get_rtc_stop(pcf8563_handle_t *handle, pcf8563_bool_t *enable);
 
 /**
  * @brief     enable or disable power on reset
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set power on reset failed
@@ -377,8 +377,8 @@ uint8_t pcf8563_set_power_on_reset(pcf8563_handle_t *handle, pcf8563_bool_t enab
 
 /**
  * @brief      get the power on reset status
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get the power on reset failed
@@ -390,8 +390,8 @@ uint8_t pcf8563_get_power_on_reset(pcf8563_handle_t *handle, pcf8563_bool_t *ena
 
 /**
  * @brief     enable or disable minute alarm
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set minute alarm enable failed
@@ -403,8 +403,8 @@ uint8_t pcf8563_set_minute_alarm_enable(pcf8563_handle_t *handle, pcf8563_bool_t
 
 /**
  * @brief      get the minute alarm status
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get minute alarm enable failed
@@ -416,8 +416,8 @@ uint8_t pcf8563_get_minute_alarm_enable(pcf8563_handle_t *handle, pcf8563_bool_t
 
 /**
  * @brief     set minute alarm
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] minute is the set minute
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] minute set minute
  * @return    status code
  *            - 0 success
  *            - 1 set minute alarm failed
@@ -430,8 +430,8 @@ uint8_t pcf8563_set_minute_alarm(pcf8563_handle_t *handle, uint8_t minute);
 
 /**
  * @brief      get minute alarm
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *minute points to a minute buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *minute pointer to a minute buffer
  * @return     status code
  *             - 0 success
  *             - 1 get minute alarm failed
@@ -443,8 +443,8 @@ uint8_t pcf8563_get_minute_alarm(pcf8563_handle_t *handle, uint8_t *minute);
 
 /**
  * @brief     enable or disable hour alarm
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set hour alarm enable failed
@@ -456,8 +456,8 @@ uint8_t pcf8563_set_hour_alarm_enable(pcf8563_handle_t *handle, pcf8563_bool_t e
 
 /**
  * @brief      get the hour alarm status
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get hour alarm enable failed
@@ -469,8 +469,8 @@ uint8_t pcf8563_get_hour_alarm_enable(pcf8563_handle_t *handle, pcf8563_bool_t *
 
 /**
  * @brief     set hour alarm
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] hour is the set hour
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] hour set hour
  * @return    status code
  *            - 0 success
  *            - 1 set hour alarm failed
@@ -483,8 +483,8 @@ uint8_t pcf8563_set_hour_alarm(pcf8563_handle_t *handle, uint8_t hour);
 
 /**
  * @brief      get hour alarm
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *hour points to an hour buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *hour pointer to an hour buffer
  * @return     status code
  *             - 0 success
  *             - 1 get hour alarm failed
@@ -496,8 +496,8 @@ uint8_t pcf8563_get_hour_alarm(pcf8563_handle_t *handle, uint8_t *hour);
 
 /**
  * @brief     enable or disable day alarm
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set day alarm enable failed
@@ -509,8 +509,8 @@ uint8_t pcf8563_set_day_alarm_enable(pcf8563_handle_t *handle, pcf8563_bool_t en
 
 /**
  * @brief      get the day alarm status
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get day alarm enable failed
@@ -522,8 +522,8 @@ uint8_t pcf8563_get_day_alarm_enable(pcf8563_handle_t *handle, pcf8563_bool_t *e
 
 /**
  * @brief     set day alarm
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] day is the set day
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] day set day
  * @return    status code
  *            - 0 success
  *            - 1 set day alarm failed
@@ -536,8 +536,8 @@ uint8_t pcf8563_set_day_alarm(pcf8563_handle_t *handle, uint8_t day);
 
 /**
  * @brief      get day alarm
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *day points to a day buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *day pointer to a day buffer
  * @return     status code
  *             - 0 success
  *             - 1 get day alarm failed
@@ -549,8 +549,8 @@ uint8_t pcf8563_get_day_alarm(pcf8563_handle_t *handle, uint8_t *day);
 
 /**
  * @brief     enable or disable week alarm
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set week alarm enable failed
@@ -562,8 +562,8 @@ uint8_t pcf8563_set_week_alarm_enable(pcf8563_handle_t *handle, pcf8563_bool_t e
 
 /**
  * @brief      get the week alarm status
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get week alarm enable failed
@@ -575,8 +575,8 @@ uint8_t pcf8563_get_week_alarm_enable(pcf8563_handle_t *handle, pcf8563_bool_t *
 
 /**
  * @brief     set week alarm
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] week is the set week
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] week set week
  * @return    status code
  *            - 0 success
  *            - 1 set week alarm failed
@@ -589,8 +589,8 @@ uint8_t pcf8563_set_week_alarm(pcf8563_handle_t *handle, uint8_t week);
 
 /**
  * @brief      get week alarm
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *week points to a week buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *week pointer to a week buffer
  * @return     status code
  *             - 0 success
  *             - 1 get week alarm failed
@@ -602,8 +602,8 @@ uint8_t pcf8563_get_week_alarm(pcf8563_handle_t *handle, uint8_t *week);
 
 /**
  * @brief     enable or disable clock out enable
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set clock out enable failed
@@ -615,8 +615,8 @@ uint8_t pcf8563_set_clock_out_enable(pcf8563_handle_t *handle, pcf8563_bool_t en
 
 /**
  * @brief      get clock out enable status
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get clock out enable failed
@@ -628,8 +628,8 @@ uint8_t pcf8563_get_clock_out_enable(pcf8563_handle_t *handle, pcf8563_bool_t *e
 
 /**
  * @brief     set clock out
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] clk is the set clock
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] clk set clock
  * @return    status code
  *            - 0 success
  *            - 1 set clock out failed
@@ -641,8 +641,8 @@ uint8_t pcf8563_set_clock_out(pcf8563_handle_t *handle, pcf8563_clock_out_t clk)
 
 /**
  * @brief      get clock out
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *clk points to a clock buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *clk pointer to a clock buffer
  * @return     status code
  *             - 0 success
  *             - 1 get clock out failed
@@ -654,8 +654,8 @@ uint8_t pcf8563_get_clock_out(pcf8563_handle_t *handle, pcf8563_clock_out_t *clk
 
 /**
  * @brief     enable or disable timer enable
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set timer enable failed
@@ -667,8 +667,8 @@ uint8_t pcf8563_set_timer_enable(pcf8563_handle_t *handle, pcf8563_bool_t enable
 
 /**
  * @brief      get timer enable status
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get timer enable failed
@@ -680,8 +680,8 @@ uint8_t pcf8563_get_timer_enable(pcf8563_handle_t *handle, pcf8563_bool_t *enabl
 
 /**
  * @brief     set timer freq
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] freq is the set freq
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] freq set freq
  * @return    status code
  *            - 0 success
  *            - 1 set timer freq failed
@@ -693,8 +693,8 @@ uint8_t pcf8563_set_timer_freq(pcf8563_handle_t *handle, pcf8563_timer_freq_t fr
 
 /**
  * @brief      get timer freq
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *freq points to a freq buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *freq pointer to a freq buffer
  * @return     status code
  *             - 0 success
  *             - 1 get timer freq failed
@@ -706,8 +706,8 @@ uint8_t pcf8563_get_timer_freq(pcf8563_handle_t *handle, pcf8563_timer_freq_t *f
 
 /**
  * @brief     set timer value
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] value is the set value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] value set value
  * @return    status code
  *            - 0 success
  *            - 1 set timer value failed
@@ -719,8 +719,8 @@ uint8_t pcf8563_set_timer_value(pcf8563_handle_t *handle, uint8_t value);
 
 /**
  * @brief      get timer value
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *value points to a value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *value pointer to a value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get timer value failed
@@ -732,8 +732,8 @@ uint8_t pcf8563_get_timer_value(pcf8563_handle_t *handle, uint8_t *value);
 
 /**
  * @brief     enable or disable timer interrupt
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set timer interrupt failed
@@ -745,8 +745,8 @@ uint8_t pcf8563_set_timer_interrupt(pcf8563_handle_t *handle, pcf8563_bool_t ena
 
 /**
  * @brief      get timer interrupt status
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get timer interrupt failed
@@ -758,8 +758,8 @@ uint8_t pcf8563_get_timer_interrupt(pcf8563_handle_t *handle, pcf8563_bool_t *en
 
 /**
  * @brief     enable or disable alarm interrupt
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set alarm interrupt failed
@@ -771,8 +771,8 @@ uint8_t pcf8563_set_alarm_interrupt(pcf8563_handle_t *handle, pcf8563_bool_t ena
 
 /**
  * @brief      get alarm interrupt status
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get alarm interrupt failed
@@ -784,8 +784,8 @@ uint8_t pcf8563_get_alarm_interrupt(pcf8563_handle_t *handle, pcf8563_bool_t *en
 
 /**
  * @brief     set the interrupt mode
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] mode is the set mode
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] mode set mode
  * @return    status code
  *            - 0 success
  *            - 1 set interrupt mode failed
@@ -797,8 +797,8 @@ uint8_t pcf8563_set_interrupt_mode(pcf8563_handle_t *handle, pcf8563_interrupt_m
 
 /**
  * @brief      get the interrupt mode
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[out] *mode points to a mode buffer
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[out] *mode pointer to a mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get interrupt mode failed
@@ -810,8 +810,8 @@ uint8_t pcf8563_get_interrupt_mode(pcf8563_handle_t *handle, pcf8563_interrupt_m
 
 /**
  * @brief     clear status
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] event is the set event
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] event set event
  * @return    status code
  *            - 0 success
  *            - 1 clear status failed
@@ -834,10 +834,10 @@ uint8_t pcf8563_clear_status(pcf8563_handle_t *handle, pcf8563_interrupt_event_t
 
 /**
  * @brief     set the chip register
- * @param[in] *handle points to a pcf8563 handle structure
- * @param[in] reg is the iic register address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the data buffer length
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] reg iic register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data buffer length
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -849,10 +849,10 @@ uint8_t pcf8563_set_reg(pcf8563_handle_t *handle, uint8_t reg, uint8_t *buf, uin
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to a pcf8563 handle structure
- * @param[in]  reg is the iic register address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data buffer length
+ * @param[in]  *handle pointer to a pcf8563 handle structure
+ * @param[in]  reg iic register address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data buffer length
  * @return     status code
  *             - 0 success
  *             - 1 read failed

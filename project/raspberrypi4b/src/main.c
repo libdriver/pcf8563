@@ -53,7 +53,7 @@ uint8_t (*g_gpio_irq)(void) = NULL;        /**< gpio irq function address */
 
 /**
  * @brief     interface receive callback
- * @param[in] type is the event type
+ * @param[in] type event type
  * @note      none
  */
 static void a_alarm_callback(uint8_t type)
@@ -84,7 +84,7 @@ static void a_alarm_callback(uint8_t type)
 
 /**
  * @brief     interface receive callback
- * @param[in] type is the event type
+ * @param[in] type event type
  * @note      none
  */
 static void a_timer_callback(uint8_t type)
@@ -115,8 +115,8 @@ static void a_timer_callback(uint8_t type)
 
 /**
  * @brief     pcf8563 full function
- * @param[in] argc is arg numbers
- * @param[in] **argv is the arg address
+ * @param[in] argc arg numbers
+ * @param[in] **argv arg address
  * @return    status code
  *            - 0 success
  *            - 1 run failed
@@ -944,8 +944,8 @@ uint8_t pcf8563(uint8_t argc, char **argv)
 
 /**
  * @brief     main function
- * @param[in] argc is arg numbers
- * @param[in] **argv is the arg address
+ * @param[in] argc arg numbers
+ * @param[in] **argv arg address
  * @return    status code
  *             - 0 success
  * @note      none

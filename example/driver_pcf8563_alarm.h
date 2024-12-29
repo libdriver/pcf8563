@@ -56,15 +56,15 @@ extern "C"{
  */
 typedef struct pcf8563_alarm_param_s
 {
-    pcf8563_bool_t minute_enable;                  /**< minute enable */
-    uint8_t minute;                                /**< minute */
-    pcf8563_bool_t hour_enable;                    /**< hour enable */
-    uint8_t hour;                                  /**< hour */
-    pcf8563_bool_t day_enable;                     /**< day enable */
-    uint8_t day;                                   /**< day */
-    pcf8563_bool_t week_enable;                    /**< week enable */
-    uint8_t week;                                  /**< week */
-    pcf8563_interrupt_mode_t mode;                 /**< interrupt mode */
+    pcf8563_bool_t minute_enable;         /**< minute enable */
+    uint8_t minute;                       /**< minute */
+    pcf8563_bool_t hour_enable;           /**< hour enable */
+    uint8_t hour;                         /**< hour */
+    pcf8563_bool_t day_enable;            /**< day enable */
+    uint8_t day;                          /**< day */
+    pcf8563_bool_t week_enable;           /**< week enable */
+    uint8_t week;                         /**< week */
+    pcf8563_interrupt_mode_t mode;        /**< interrupt mode */
 } pcf8563_alarm_param_t;
 
 /**
@@ -78,7 +78,7 @@ uint8_t pcf8563_alarm_irq_handler(void);
 
 /**
  * @brief     alarm example init
- * @param[in] *callback point to a receive callback function address
+ * @param[in] *callback pointer to a receive callback function address
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -97,7 +97,7 @@ uint8_t pcf8563_alarm_deinit(void);
 
 /**
  * @brief     alarm example enable the alarm
- * @param[in] *param points to a pcf8563_alarm_param_t structure
+ * @param[in] *param pointer to a pcf8563_alarm_param_t structure
  * @return    status code
  *            - 0 success
  *            - 1 alarm enable failed
@@ -116,7 +116,7 @@ uint8_t pcf8563_alarm_disable(void);
 
 /**
  * @brief     alarm example set the time
- * @param[in] *t points to a time structure
+ * @param[in] *t pointer to a time structure
  * @return    status code
  *            - 0 success
  *            - 1 set time failed
@@ -126,7 +126,7 @@ uint8_t pcf8563_alarm_set_time(pcf8563_time_t *t);
 
 /**
  * @brief     alarm example set the time by a unix timestamp
- * @param[in] timestamp is a unix timestamp
+ * @param[in] timestamp unix timestamp
  * @return    status code
  *            - 0 success
  *            - 1 set timestamp failed
@@ -136,7 +136,7 @@ uint8_t pcf8563_alarm_set_timestamp(time_t timestamp);
 
 /**
  * @brief     alarm example set the local time zone
- * @param[in] zone is the local time zone
+ * @param[in] zone local time zone
  * @return    status code
  *            - 0 success
  * @note      none
@@ -145,7 +145,7 @@ uint8_t pcf8563_alarm_set_timestamp_time_zone(int8_t zone);
 
 /**
  * @brief      alarm example get the time
- * @param[out] *t points to a time structure
+ * @param[out] *t pointer to a time structure
  * @return     status code
  *             - 0 success
  *             - 1 get time failed
@@ -155,7 +155,7 @@ uint8_t pcf8563_alarm_get_time(pcf8563_time_t *t);
 
 /**
  * @brief      alarm example get the time in a unix timestamp
- * @param[out] *timestamp points to a unix timestamp buffer
+ * @param[out] *timestamp pointer to a unix timestamp buffer
  * @return     status code
  *             - 0 success
  *             - 1 get timestamp failed
@@ -165,7 +165,7 @@ uint8_t pcf8563_alarm_get_timestamp(time_t *timestamp);
 
 /**
  * @brief      alarm example get the local time zone
- * @param[out] *zone points to a local time zone buffer
+ * @param[out] *zone pointer to a local time zone buffer
  * @return     status code
  *             - 0 success
  * @note       none
@@ -174,8 +174,8 @@ uint8_t pcf8563_alarm_get_timestamp_time_zone(int8_t *zone);
 
 /**
  * @brief      alarm example get the ascii time
- * @param[out] *buf points to an ascii buffer
- * @param[in]  len is the data length
+ * @param[out] *buf pointer to an ascii buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 read failed

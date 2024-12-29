@@ -338,7 +338,7 @@ Functions</h2></td></tr>
 <p>alarm example enable the alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*param</td><td>points to a pcf8563_alarm_param_t structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*param</td><td>pointer to a pcf8563_alarm_param_t structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -382,8 +382,8 @@ Functions</h2></td></tr>
 <p>alarm example get the ascii time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*buf</td><td>points to an ascii buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>is the data length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*buf</td><td>pointer to an ascii buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data length </td></tr>
   </table>
   </dd>
 </dl>
@@ -417,7 +417,7 @@ Functions</h2></td></tr>
 <p>alarm example get the time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>points to a time structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>pointer to a time structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -451,7 +451,7 @@ Functions</h2></td></tr>
 <p>alarm example get the time in a unix timestamp </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*timestamp</td><td>points to a unix timestamp buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*timestamp</td><td>pointer to a unix timestamp buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -485,7 +485,7 @@ Functions</h2></td></tr>
 <p>alarm example get the local time zone </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*zone</td><td>points to a local time zone buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*zone</td><td>pointer to a local time zone buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -518,7 +518,7 @@ Functions</h2></td></tr>
 <p>alarm example init </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*callback</td><td>point to a receive callback function address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*callback</td><td>pointer to a receive callback function address </td></tr>
   </table>
   </dd>
 </dl>
@@ -580,7 +580,7 @@ Functions</h2></td></tr>
 <p>alarm example set the time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*t</td><td>points to a time structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*t</td><td>pointer to a time structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -614,7 +614,7 @@ Functions</h2></td></tr>
 <p>alarm example set the time by a unix timestamp </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>is a unix timestamp </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>unix timestamp </td></tr>
   </table>
   </dd>
 </dl>
@@ -648,7 +648,7 @@ Functions</h2></td></tr>
 <p>alarm example set the local time zone </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">zone</td><td>is the local time zone </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zone</td><td>local time zone </td></tr>
   </table>
   </dd>
 </dl>
@@ -719,8 +719,8 @@ Functions</h2></td></tr>
 <p>basic example get the ascii time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*buf</td><td>points to an ascii buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>is the data length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*buf</td><td>pointer to an ascii buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data length </td></tr>
   </table>
   </dd>
 </dl>
@@ -754,7 +754,7 @@ Functions</h2></td></tr>
 <p>basic example get the time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>points to a time structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>pointer to a time structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -788,7 +788,7 @@ Functions</h2></td></tr>
 <p>basic example get the time in a unix timestamp </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*timestamp</td><td>points to a unix timestamp buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*timestamp</td><td>pointer to a unix timestamp buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -822,7 +822,7 @@ Functions</h2></td></tr>
 <p>basic example get the local time zone </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*zone</td><td>points to a local time zone buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*zone</td><td>pointer to a local time zone buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -883,7 +883,7 @@ Functions</h2></td></tr>
 <p>basic example set the time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*t</td><td>points to a time structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*t</td><td>pointer to a time structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -917,7 +917,7 @@ Functions</h2></td></tr>
 <p>basic example set the time by a unix timestamp </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>is a unix timestamp </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>unix timestamp </td></tr>
   </table>
   </dd>
 </dl>
@@ -951,7 +951,7 @@ Functions</h2></td></tr>
 <p>basic example set the local time zone </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">zone</td><td>is the local time zone </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zone</td><td>local time zone </td></tr>
   </table>
   </dd>
 </dl>
@@ -1040,7 +1040,7 @@ Functions</h2></td></tr>
 <p>output example enable the output </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">clk</td><td>is the set clock </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">clk</td><td>set clock </td></tr>
   </table>
   </dd>
 </dl>
@@ -1084,8 +1084,8 @@ Functions</h2></td></tr>
 <p>output example get the ascii time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*buf</td><td>points to an ascii buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>is the data length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*buf</td><td>pointer to an ascii buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data length </td></tr>
   </table>
   </dd>
 </dl>
@@ -1119,7 +1119,7 @@ Functions</h2></td></tr>
 <p>output example get the time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>points to a time structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>pointer to a time structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1153,7 +1153,7 @@ Functions</h2></td></tr>
 <p>output example get the time in a unix timestamp </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*timestamp</td><td>points to a unix timestamp buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*timestamp</td><td>pointer to a unix timestamp buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1187,7 +1187,7 @@ Functions</h2></td></tr>
 <p>output example get the local time zone </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*zone</td><td>points to a local time zone buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*zone</td><td>pointer to a local time zone buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1248,7 +1248,7 @@ Functions</h2></td></tr>
 <p>output example set the time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*t</td><td>points to a time structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*t</td><td>pointer to a time structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1282,7 +1282,7 @@ Functions</h2></td></tr>
 <p>output example set the time by a unix timestamp </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>is a unix timestamp </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>unix timestamp </td></tr>
   </table>
   </dd>
 </dl>
@@ -1316,7 +1316,7 @@ Functions</h2></td></tr>
 <p>output example set the local time zone </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">zone</td><td>is the local time zone </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zone</td><td>local time zone </td></tr>
   </table>
   </dd>
 </dl>
@@ -1421,9 +1421,9 @@ Functions</h2></td></tr>
 <p>timer example enable the timer </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>is the set freq </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>is the set value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the set interrupt mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>set freq </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>set value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>set interrupt mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -1467,8 +1467,8 @@ Functions</h2></td></tr>
 <p>timer example get the ascii time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*buf</td><td>points to an ascii buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>is the data length </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*buf</td><td>pointer to an ascii buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data length </td></tr>
   </table>
   </dd>
 </dl>
@@ -1502,7 +1502,7 @@ Functions</h2></td></tr>
 <p>timer example get the time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>points to a time structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>pointer to a time structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1536,7 +1536,7 @@ Functions</h2></td></tr>
 <p>timer example get the time in a unix timestamp </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*timestamp</td><td>points to a unix timestamp buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*timestamp</td><td>pointer to a unix timestamp buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1570,7 +1570,7 @@ Functions</h2></td></tr>
 <p>timer example get the local time zone </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*zone</td><td>points to a local time zone buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*zone</td><td>pointer to a local time zone buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1603,7 +1603,7 @@ Functions</h2></td></tr>
 <p>timer example init </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*callback</td><td>point to a receive callback function address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*callback</td><td>pointer to a receive callback function address </td></tr>
   </table>
   </dd>
 </dl>
@@ -1665,7 +1665,7 @@ Functions</h2></td></tr>
 <p>timer example set the time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*t</td><td>points to a time structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*t</td><td>pointer to a time structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1699,7 +1699,7 @@ Functions</h2></td></tr>
 <p>timer example set the time by a unix timestamp </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>is a unix timestamp </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timestamp</td><td>unix timestamp </td></tr>
   </table>
   </dd>
 </dl>
@@ -1733,7 +1733,7 @@ Functions</h2></td></tr>
 <p>timer example set the local time zone </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">zone</td><td>is the local time zone </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zone</td><td>local time zone </td></tr>
   </table>
   </dd>
 </dl>

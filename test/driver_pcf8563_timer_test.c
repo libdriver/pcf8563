@@ -42,7 +42,7 @@ static volatile uint8_t gs_flag;          /**< flag */
 
 /**
  * @brief     interface receive callback
- * @param[in] type is the event type
+ * @param[in] type event type
  * @note      none
  */
 static void a_receive_callback(uint8_t type)

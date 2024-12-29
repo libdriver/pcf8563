@@ -62,7 +62,7 @@ uint8_t pcf8563_timer_irq_handler(void);
 
 /**
  * @brief     timer example init
- * @param[in] *callback point to a receive callback function address
+ * @param[in] *callback pointer to a receive callback function address
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -81,9 +81,9 @@ uint8_t pcf8563_timer_deinit(void);
 
 /**
  * @brief     timer example enable the timer
- * @param[in] freq is the set freq
- * @param[in] value is the set value
- * @param[in] mode is the set interrupt mode
+ * @param[in] freq set freq
+ * @param[in] value set value
+ * @param[in] mode set interrupt mode
  * @return    status code
  *            - 0 success
  *            - 1 timer enable failed
@@ -102,7 +102,7 @@ uint8_t pcf8563_timer_disable(void);
 
 /**
  * @brief     timer example set the time
- * @param[in] *t points to a time structure
+ * @param[in] *t pointer to a time structure
  * @return    status code
  *            - 0 success
  *            - 1 set time failed
@@ -112,7 +112,7 @@ uint8_t pcf8563_timer_set_time(pcf8563_time_t *t);
 
 /**
  * @brief     timer example set the time by a unix timestamp
- * @param[in] timestamp is a unix timestamp
+ * @param[in] timestamp unix timestamp
  * @return    status code
  *            - 0 success
  *            - 1 set timestamp failed
@@ -122,7 +122,7 @@ uint8_t pcf8563_timer_set_timestamp(time_t timestamp);
 
 /**
  * @brief     timer example set the local time zone
- * @param[in] zone is the local time zone
+ * @param[in] zone local time zone
  * @return    status code
  *            - 0 success
  * @note      none
@@ -131,7 +131,7 @@ uint8_t pcf8563_timer_set_timestamp_time_zone(int8_t zone);
 
 /**
  * @brief      timer example get the time
- * @param[out] *t points to a time structure
+ * @param[out] *t pointer to a time structure
  * @return     status code
  *             - 0 success
  *             - 1 get time failed
@@ -141,7 +141,7 @@ uint8_t pcf8563_timer_get_time(pcf8563_time_t *t);
 
 /**
  * @brief      timer example get the time in a unix timestamp
- * @param[out] *timestamp points to a unix timestamp buffer
+ * @param[out] *timestamp pointer to a unix timestamp buffer
  * @return     status code
  *             - 0 success
  *             - 1 get timestamp failed
@@ -151,7 +151,7 @@ uint8_t pcf8563_timer_get_timestamp(time_t *timestamp);
 
 /**
  * @brief      timer example get the local time zone
- * @param[out] *zone points to a local time zone buffer
+ * @param[out] *zone pointer to a local time zone buffer
  * @return     status code
  *             - 0 success
  * @note       none
@@ -160,8 +160,8 @@ uint8_t pcf8563_timer_get_timestamp_time_zone(int8_t *zone);
 
 /**
  * @brief      timer example get the ascii time
- * @param[out] *buf points to an ascii buffer
- * @param[in]  len is the data length
+ * @param[out] *buf pointer to an ascii buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 read failed

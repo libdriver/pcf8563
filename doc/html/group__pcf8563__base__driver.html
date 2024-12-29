@@ -501,8 +501,8 @@ Functions</h2></td></tr>
 <p>clear status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>is the set event </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>set event </td></tr>
   </table>
   </dd>
 </dl>
@@ -538,7 +538,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -584,8 +584,8 @@ Functions</h2></td></tr>
 <p>get alarm interrupt status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -631,8 +631,8 @@ Functions</h2></td></tr>
 <p>get clock out </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*clk</td><td>points to a clock buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*clk</td><td>pointer to a clock buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -678,8 +678,8 @@ Functions</h2></td></tr>
 <p>get clock out enable status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -725,8 +725,8 @@ Functions</h2></td></tr>
 <p>get day alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*day</td><td>points to a day buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*day</td><td>pointer to a day buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -772,8 +772,8 @@ Functions</h2></td></tr>
 <p>get the day alarm status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -819,8 +819,8 @@ Functions</h2></td></tr>
 <p>get hour alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*hour</td><td>points to an hour buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*hour</td><td>pointer to an hour buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -866,8 +866,8 @@ Functions</h2></td></tr>
 <p>get the hour alarm status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -913,8 +913,8 @@ Functions</h2></td></tr>
 <p>get the interrupt mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>points to a mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>pointer to a mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -960,8 +960,8 @@ Functions</h2></td></tr>
 <p>get minute alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*minute</td><td>points to a minute buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*minute</td><td>pointer to a minute buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1007,8 +1007,8 @@ Functions</h2></td></tr>
 <p>get the minute alarm status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1054,8 +1054,8 @@ Functions</h2></td></tr>
 <p>get the power on reset status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1101,8 +1101,8 @@ Functions</h2></td></tr>
 <p>get the rtc stop status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1148,8 +1148,8 @@ Functions</h2></td></tr>
 <p>get the test mode status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1195,8 +1195,8 @@ Functions</h2></td></tr>
 <p>get the current time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>points to a time structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*t</td><td>pointer to a time structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1243,8 +1243,8 @@ Functions</h2></td></tr>
 <p>get timer enable status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1290,8 +1290,8 @@ Functions</h2></td></tr>
 <p>get timer freq </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*freq</td><td>points to a freq buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*freq</td><td>pointer to a freq buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1337,8 +1337,8 @@ Functions</h2></td></tr>
 <p>get timer interrupt status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1384,8 +1384,8 @@ Functions</h2></td></tr>
 <p>get timer value </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*value</td><td>points to a value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*value</td><td>pointer to a value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1431,8 +1431,8 @@ Functions</h2></td></tr>
 <p>get week alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*week</td><td>points to a week buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*week</td><td>pointer to a week buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1478,8 +1478,8 @@ Functions</h2></td></tr>
 <p>get the week alarm status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1515,7 +1515,7 @@ Functions</h2></td></tr>
 <p>get chip's information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to a pcf8563 info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to a pcf8563 info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1549,7 +1549,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1585,7 +1585,7 @@ Functions</h2></td></tr>
 <p>irq handler </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1631,8 +1631,8 @@ Functions</h2></td></tr>
 <p>enable or disable alarm interrupt </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1678,8 +1678,8 @@ Functions</h2></td></tr>
 <p>set clock out </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">clk</td><td>is the set clock </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">clk</td><td>set clock </td></tr>
   </table>
   </dd>
 </dl>
@@ -1725,8 +1725,8 @@ Functions</h2></td></tr>
 <p>enable or disable clock out enable </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1772,8 +1772,8 @@ Functions</h2></td></tr>
 <p>set day alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>is the set day </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">day</td><td>set day </td></tr>
   </table>
   </dd>
 </dl>
@@ -1820,8 +1820,8 @@ Functions</h2></td></tr>
 <p>enable or disable day alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1867,8 +1867,8 @@ Functions</h2></td></tr>
 <p>set hour alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">hour</td><td>is the set hour </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hour</td><td>set hour </td></tr>
   </table>
   </dd>
 </dl>
@@ -1915,8 +1915,8 @@ Functions</h2></td></tr>
 <p>enable or disable hour alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1962,8 +1962,8 @@ Functions</h2></td></tr>
 <p>set the interrupt mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the set mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>set mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -2009,8 +2009,8 @@ Functions</h2></td></tr>
 <p>set minute alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>is the set minute </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minute</td><td>set minute </td></tr>
   </table>
   </dd>
 </dl>
@@ -2057,8 +2057,8 @@ Functions</h2></td></tr>
 <p>enable or disable minute alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2104,8 +2104,8 @@ Functions</h2></td></tr>
 <p>enable or disable power on reset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2151,8 +2151,8 @@ Functions</h2></td></tr>
 <p>enable or disable rtc stop </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2198,8 +2198,8 @@ Functions</h2></td></tr>
 <p>enable or disable test mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2245,8 +2245,8 @@ Functions</h2></td></tr>
 <p>set the current time </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*t</td><td>points to a time structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*t</td><td>pointer to a time structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -2293,8 +2293,8 @@ Functions</h2></td></tr>
 <p>enable or disable timer enable </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2340,8 +2340,8 @@ Functions</h2></td></tr>
 <p>set timer freq </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>is the set freq </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">freq</td><td>set freq </td></tr>
   </table>
   </dd>
 </dl>
@@ -2387,8 +2387,8 @@ Functions</h2></td></tr>
 <p>enable or disable timer interrupt </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2434,8 +2434,8 @@ Functions</h2></td></tr>
 <p>set timer value </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>is the set value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>set value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2481,8 +2481,8 @@ Functions</h2></td></tr>
 <p>set week alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">week</td><td>is the set week </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">week</td><td>set week </td></tr>
   </table>
   </dd>
 </dl>
@@ -2529,8 +2529,8 @@ Functions</h2></td></tr>
 <p>enable or disable week alarm </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a pcf8563 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a pcf8563 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>

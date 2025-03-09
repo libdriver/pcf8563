@@ -933,6 +933,7 @@ uint8_t pcf8563(uint8_t argc, char **argv)
         /* print pin connection */
         pcf8563_interface_debug_print("pcf8563: SCL connected to GPIO3(BCM).\n");
         pcf8563_interface_debug_print("pcf8563: SDA connected to GPIO2(BCM).\n");
+        pcf8563_interface_debug_print("pcf8563: INT connected to GPIO17(BCM).\n");
 
         return 0;
     }

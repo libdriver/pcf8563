@@ -967,6 +967,7 @@ uint8_t pcf8563(uint8_t argc, char **argv)
         /* print pin connection */
         pcf8563_interface_debug_print("pcf8563: SCL connected to GPIOB PIN8.\n");
         pcf8563_interface_debug_print("pcf8563: SDA connected to GPIOB PIN9.\n");
+        pcf8563_interface_debug_print("pcf8563: INT connected to GPIOB PIN0.\n");
 
         return 0;
     }

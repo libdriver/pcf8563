@@ -10,6 +10,8 @@ UART Pin: TX/RX PA9/PA10.
 
 IIC Pin: SCL/SDA PB8/PB9.
 
+GPIO Pin: INT PB0
+
 ### 2. Development and Debugging
 
 #### 2.1 Integrated Development Environment
@@ -171,6 +173,7 @@ pcf8563 -p
 
 pcf8563: SCL connected to GPIOB PIN8.
 pcf8563: SDA connected to GPIOB PIN9.
+pcf8563: INT connected to GPIOB PIN0.
 ```
 
 ```shell

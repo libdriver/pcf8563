@@ -6,6 +6,8 @@ Board Name: Raspberry Pi 4B.
 
 IIC Pin: SCL/SDA GPIO3/GPIO2.
 
+GPIO PIn: INT GPIO17.
+
 ### 2. Install
 
 #### 2.1 Dependencies
@@ -205,6 +207,7 @@ pcf8563: min temperature is -40.0C.
 
 pcf8563: SCL connected to GPIO3(BCM).
 pcf8563: SDA connected to GPIO2(BCM).
+pcf8563: INT connected to GPIO17(BCM).
 ```
 
 ```shell

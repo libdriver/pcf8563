@@ -10,7 +10,7 @@
 
 The PCF8563 is a CMOS1 Real-Time Clock (RTC) and calendar optimized for low power consumption. A programmable clock output, interrupt output, and voltage-low detector are also provided. All addresses and data are transferred serially via a two-line bidirectional I2C-bus. Maximum bus speed is 400 kbit/s. The register address is incremented automatically after each written or read data byte.
 
-LibDriver PCF8563 is a full function driver of pcf8563 launched by LibDriver.It provides time reading, alarm clock triggering, timer interrupt triggering, square wave output and other functions. LibDriver is MISRA compliant.
+LibDriver PCF8563 is a full-featured driver of PCF8563 launched by LibDriver.It provides time reading, alarm clock triggering, timer interrupt triggering, square wave output and other functions. LibDriver is MISRA compliant.
 
 ### Table of Contents
 

@@ -10,7 +10,7 @@
 
 Der PCF8563 ist eine CMOS1-Echtzeituhr (RTC) und ein Kalender, die auf geringen Stromverbrauch optimiert sind. Ein programmierbarer Taktausgang, ein Interrupt-Ausgang und ein Unterspannungsdetektor sind ebenfalls vorhanden. Alle Adressen und Daten werden seriell über einen bidirektionalen I2C-Bus mit zwei Leitungen übertragen. Die maximale Busgeschwindigkeit beträgt 400 kbit/s. Die Registeradresse wird nach jedem geschriebenen oder gelesenen Datenbyte automatisch erhöht.
 
-LibDriver PCF8563 ist ein voll funktionsfähiger Treiber von pcf8563, der von LibDriver eingeführt wurde. Er bietet Zeitablesung, Weckerauslösung, Timer-Interruptauslösung, Rechteckwellenausgabe und andere Funktionen. LibDriver ist MISRA-kompatibel.
+LibDriver PCF8563 ist ein voll funktionsfähiger Treiber von PCF8563, der von LibDriver eingeführt wurde. Er bietet Zeitablesung, Weckerauslösung, Timer-Interruptauslösung, Rechteckwellenausgabe und andere Funktionen. LibDriver ist MISRA-kompatibel.
 
 ### Inhaltsverzeichnis
 

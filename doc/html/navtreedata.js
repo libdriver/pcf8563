@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "LibDriver PCF8563", "index.html", [
-    [ "Modules", "modules.html", "modules" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -51,9 +51,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"group__pcf8563__base__driver.html#gga1d698201489f364205a25838a896ca18a0c581e78f67f4cfa2548942493c91497",
-"structpcf8563__info__s.html#ad25285dbf810c90f8eaf3fcef6f2b2ea"
+"structpcf8563__handle__s.html#a8826dd07625f8d90859ce9bd09628d61"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';

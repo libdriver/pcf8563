@@ -392,6 +392,9 @@ uint8_t pcf8563_set_test_mode(pcf8563_handle_t *handle, pcf8563_bool_t enable)
         
         return 1;                                                                            /* return error */
     }
+    prev &= ~(1 << 6);                                                                       /* clear unused */
+    prev &= ~(1 << 4);                                                                       /* clear unused */
+    prev &= ~(7 << 0);                                                                       /* clear unused */
     prev &= ~(1 << 7);                                                                       /* clear config */
     prev |= enable << 7;                                                                     /* set bool */
     res = a_pcf8563_iic_write(handle, PCF8563_REG_CONTROL_STATUS1, prev);                    /* write control status1 */
@@ -474,6 +477,9 @@ uint8_t pcf8563_set_rtc_stop(pcf8563_handle_t *handle, pcf8563_bool_t enable)
         
         return 1;                                                                            /* return error */
     }
+    prev &= ~(1 << 6);                                                                       /* clear unused */
+    prev &= ~(1 << 4);                                                                       /* clear unused */
+    prev &= ~(7 << 0);                                                                       /* clear unused */
     prev &= ~(1 << 5);                                                                       /* clear config */
     prev |= enable << 5;                                                                     /* set bool */
     res = a_pcf8563_iic_write(handle, PCF8563_REG_CONTROL_STATUS1, prev);                    /* write control status1 */
@@ -556,6 +562,9 @@ uint8_t pcf8563_set_power_on_reset(pcf8563_handle_t *handle, pcf8563_bool_t enab
         
         return 1;                                                                            /* return error */
     }
+    prev &= ~(1 << 6);                                                                       /* clear unused */
+    prev &= ~(1 << 4);                                                                       /* clear unused */
+    prev &= ~(7 << 0);                                                                       /* clear unused */
     prev &= ~(1 << 3);                                                                       /* clear config */
     prev |= enable << 3;                                                                     /* set bool */
     res = a_pcf8563_iic_write(handle, PCF8563_REG_CONTROL_STATUS1, prev);                    /* write control status1 */
@@ -1722,6 +1731,7 @@ uint8_t pcf8563_set_timer_interrupt(pcf8563_handle_t *handle, pcf8563_bool_t ena
         
         return 1;                                                                            /* return error */
     }
+    prev &= ~(7 << 5);                                                                       /* clear unused */
     prev &= ~(1 << 0);                                                                       /* clear config */
     prev |= enable << 0;                                                                     /* set bool */
     res = a_pcf8563_iic_write(handle, PCF8563_REG_CONTROL_STATUS2, prev);                    /* write control status2 */
@@ -1804,6 +1814,7 @@ uint8_t pcf8563_set_alarm_interrupt(pcf8563_handle_t *handle, pcf8563_bool_t ena
         
         return 1;                                                                            /* return error */
     }
+    prev &= ~(7 << 5);                                                                       /* clear unused */
     prev &= ~(1 << 1);                                                                       /* clear config */
     prev |= enable << 1;                                                                     /* set bool */
     res = a_pcf8563_iic_write(handle, PCF8563_REG_CONTROL_STATUS2, prev);                    /* write control status2 */
@@ -1886,6 +1897,7 @@ uint8_t pcf8563_set_interrupt_mode(pcf8563_handle_t *handle, pcf8563_interrupt_m
         
         return 1;                                                                            /* return error */
     }
+    prev &= ~(7 << 5);                                                                       /* clear unused */
     prev &= ~(1 << 4);                                                                       /* clear config */
     prev |= mode << 4;                                                                       /* set mode */
     res = a_pcf8563_iic_write(handle, PCF8563_REG_CONTROL_STATUS2, prev);                    /* write control status2 */
@@ -1984,6 +1996,7 @@ uint8_t pcf8563_irq_handler(pcf8563_handle_t *handle)
             handle->receive_callback(PCF8563_INTERRUPT_EVENT_ALARM);                         /* run the callback */
         }
     }
+    prev &= ~(7 << 5);                                                                       /* clear unused */
     res = a_pcf8563_iic_write(handle, PCF8563_REG_CONTROL_STATUS2, prev2);                   /* write control status2 */
     if (res != 0)                                                                            /* check result */
     {
@@ -2035,6 +2048,7 @@ uint8_t pcf8563_clear_status(pcf8563_handle_t *handle, pcf8563_interrupt_event_t
     {
         prev &= ~(1 << 3);                                                                   /* clear bit */
     }
+    prev &= ~(7 << 5);                                                                       /* clear unused */
     res = a_pcf8563_iic_write(handle, PCF8563_REG_CONTROL_STATUS2, prev);                    /* write control status2 */
     if (res != 0)                                                                            /* check result */
     {

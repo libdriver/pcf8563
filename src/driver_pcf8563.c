@@ -115,6 +115,27 @@ static uint8_t a_pcf8563_iic_multiple_read(pcf8563_handle_t *handle, uint8_t reg
 }
 
 /**
+ * @brief     write multiple bytes
+ * @param[in] *handle pointer to a pcf8563 handle structure
+ * @param[in] reg iic register address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len data buffer length
+ * @return    status code
+ *            - 0 success
+ *            - 1 write failed
+ * @note      none
+ */
+static uint8_t a_pcf8563_iic_multiple_write(pcf8563_handle_t *handle, uint8_t reg, uint8_t *buf, uint8_t len)
+{
+    if (handle->iic_write(PCF8563_ADDRESS, reg, buf, len) != 0)       /* write data */
+    {
+        return 1;                                                     /* return error */
+    }
+    
+    return 0;                                                         /* success return 0 */
+}
+
+/**
  * @brief     hex to bcd
  * @param[in] val hex data
  * @return    bcd data
@@ -164,6 +185,7 @@ static uint8_t a_pcf8563_bcd2hex(uint8_t val)
 uint8_t pcf8563_set_time(pcf8563_handle_t *handle, pcf8563_time_t *t)
 {
     uint8_t res;
+    uint8_t buf[7];
     uint16_t year;
     
     if (handle == NULL)                                                                                      /* check handle */
@@ -223,76 +245,25 @@ uint8_t pcf8563_set_time(pcf8563_handle_t *handle, pcf8563_time_t *t)
         
         return 4;                                                                                            /* return error */
     }
-    res = a_pcf8563_iic_write(handle, PCF8563_REG_SECOND, a_pcf8563_hex2bcd(t->second));                     /* write second */
-    if (res != 0)                                                                                            /* check result */
-    {
-        handle->debug_print("pcf8563: write second failed.\n");                                              /* write second failed */
-        
-        return 1;                                                                                            /* return error */
-    }
-    res = a_pcf8563_iic_write(handle, PCF8563_REG_MINUTE, a_pcf8563_hex2bcd(t->minute));                     /* write minute */
-    if (res != 0)                                                                                            /* check result */
-    {
-        handle->debug_print("pcf8563: write minute failed.\n");                                              /* write minute failed */
-        
-        return 1;                                                                                            /* return error */
-    }
-    res = a_pcf8563_iic_write(handle, PCF8563_REG_HOUR, a_pcf8563_hex2bcd(t->hour));                         /* write hour */
-    if (res != 0)                                                                                            /* check result */
-    {
-        handle->debug_print("pcf8563: write hour failed.\n");                                                /* write hour failed */
-        
-        return 1;                                                                                            /* return error */
-    }
-    res = a_pcf8563_iic_write(handle, PCF8563_REG_WEEK, a_pcf8563_hex2bcd(t->week));                         /* write week */
-    if (res != 0)                                                                                            /* check result */
-    {
-        handle->debug_print("pcf8563: write week failed.\n");                                                /* write week failed */
-        
-        return 1;                                                                                            /* return error */
-    }
-    res = a_pcf8563_iic_write(handle, PCF8563_REG_DAY, a_pcf8563_hex2bcd(t->date));                          /* write day */
-    if (res != 0)                                                                                            /* check result */
-    {
-        handle->debug_print("pcf8563: write day failed.\n");                                                 /* write day failed */
-        
-        return 1;                                                                                            /* return error */
-    }
     year = t->year - 2000;                                                                                   /* convert year */
+    buf[0] = a_pcf8563_hex2bcd(t->second);                                                                   /* set second */
+    buf[1] = a_pcf8563_hex2bcd(t->minute);                                                                   /* set minute */
+    buf[2] = a_pcf8563_hex2bcd(t->hour);                                                                     /* set hour */
+    buf[3] = a_pcf8563_hex2bcd(t->date);                                                                     /* set day */
+    buf[4] = a_pcf8563_hex2bcd(t->week);                                                                     /* set week */
+    buf[5] = a_pcf8563_hex2bcd(t->month);                                                                    /* set month */
     if (year >= 100)                                                                                         /* check year */
     {
-        res = a_pcf8563_iic_write(handle, PCF8563_REG_MONTH, a_pcf8563_hex2bcd(t->month) | (1 << 7));        /* write month and century */
-        if (res != 0)                                                                                        /* check result */
-        {
-            handle->debug_print("pcf8563: write century and month failed.\n");                               /* write century and month failed */
-            
-            return 1;                                                                                        /* return error */
-        }
+        buf[5] |= (1 << 7);                                                                                  /* set century */
         year = year - 100;                                                                                   /* year - 100 */
-        res = a_pcf8563_iic_write(handle, PCF8563_REG_YEAR, a_pcf8563_hex2bcd((uint8_t)year));               /* write year */
-        if (res != 0)                                                                                        /* check result */
-        {
-            handle->debug_print("pcf8563: write year failed.\n");                                            /* write year failed */
-            
-            return 1;                                                                                        /* return error */
-        }
     }
-    else
+    buf[6] = a_pcf8563_hex2bcd((uint8_t)year);                                                               /* set year */
+    res = a_pcf8563_iic_multiple_write(handle, PCF8563_REG_SECOND, (uint8_t *)buf, 7);                       /* write time in one access */
+    if (res != 0)                                                                                            /* check result */
     {
-        res = a_pcf8563_iic_write(handle, PCF8563_REG_MONTH, a_pcf8563_hex2bcd(t->month));                   /* write month and century */
-        if (res != 0)                                                                                        /* check result */
-        {
-            handle->debug_print("pcf8563: write century and month failed.\n");                               /* write century and month failed */
-            
-            return 1;                                                                                        /* return error */
-        }
-        res = a_pcf8563_iic_write(handle, PCF8563_REG_YEAR, a_pcf8563_hex2bcd((uint8_t)year));               /* write year */
-        if (res != 0)                                                                                        /* check result */
-        {
-            handle->debug_print("pcf8563: write year failed.\n");                                            /* write year failed */
-            
-            return 1;                                                                                        /* return error */
-        }
+        handle->debug_print("pcf8563: write time failed.\n");                                                /* write time failed */
+        
+        return 1;                                                                                            /* return error */
     }
     
     return 0;                                                                                                /* success return 0 */
